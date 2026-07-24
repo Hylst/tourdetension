@@ -292,7 +292,7 @@ export default function HUD(props: HUDProps) {
           <div className="w-full max-w-md rounded-3xl border border-white/10 bg-gradient-to-b from-zinc-900/90 to-zinc-950/95 p-8 text-center shadow-2xl">
             <div className="mb-1 text-6xl">🧱</div>
             <h1 className="bg-gradient-to-br from-amber-200 via-orange-300 to-amber-500 bg-clip-text text-5xl font-black tracking-tight text-transparent">
-              JENGA
+              TOUR DE TENSION
             </h1>
             <p className="mt-2 text-sm text-white/50">
               Retirez un bloc. Empilez-le tout en haut. Ne soyez pas celui qui
