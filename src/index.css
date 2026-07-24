@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+  background: #0a0d14;
+  -webkit-font-smoothing: antialiased;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+}
+
+canvas {
+  touch-action: none;
+  display: block;
+}
+
+@keyframes screenshake {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  15% {
+    transform: translate(-7px, 5px) rotate(-0.4deg);
+  }
+  30% {
+    transform: translate(6px, -6px) rotate(0.5deg);
+  }
+  45% {
+    transform: translate(-5px, -4px) rotate(-0.3deg);
+  }
+  60% {
+    transform: translate(5px, 5px) rotate(0.3deg);
+  }
+  75% {
+    transform: translate(-3px, 2px) rotate(-0.2deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+.shake {
+  animation: screenshake 0.7s ease-in-out;
+}
+
+@keyframes floatup {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.floatup {
+  animation: floatup 0.4s ease-out;
+}
