@@ -99,7 +99,7 @@ export function topCompleteIndex(levels: Level[]): number {
 /**
  * Levels you may pull from: at least two blocks remain and the level sits below
  * the top complete row. Allowing a second pull from a gutted level is what
- * makes leaving a single (outer) block possible — a guaranteed topple.
+ * makes leaving a single (outer) block possible: a guaranteed topple.
  */
 export function pullableLevelSet(levels: Level[]): Set<number> {
   const tc = topCompleteIndex(levels);
@@ -286,7 +286,7 @@ export function evaluateStability(levels: Level[]): Stability {
   }
 
   // each pulled block is re-stacked on top, so the tower grows taller and the
-  // gutted base weakens — both steadily raise the tension over a game.
+  // gutted base weakens; both steadily raise the tension over a game.
   const gutted = levels.reduce(
     (acc, l, i) =>
       i < CFG.initialLevels ? acc + l.blocks.filter((b) => !b).length : acc,

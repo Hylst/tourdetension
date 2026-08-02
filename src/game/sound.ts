@@ -1,6 +1,6 @@
 // ---------------------------------------------------------------------------
 // Procedural sound effects synthesised with the Web Audio API.
-// No audio files are loaded — everything is generated on the fly.
+// No audio files are loaded: everything is generated on the fly.
 // ---------------------------------------------------------------------------
 
 export class SoundEngine {

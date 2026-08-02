@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { cn } from "../utils/cn";
 import type { Stability } from "../game/jenga";
 
@@ -177,6 +178,7 @@ function DangerMeter({ stability }: { stability: Stability }) {
 }
 
 export default function HUD(props: HUDProps) {
+  const [showInfo, setShowInfo] = useState(false);
   const {
     screen,
     phase,
@@ -280,7 +282,7 @@ export default function HUD(props: HUDProps) {
               <span className={cn("font-semibold", themes[turn].text)}>
                 {names[turn]}
               </span>{" "}
-              — touchez un bloc lumineux pour le sélectionner
+              : touchez un bloc lumineux pour le sélectionner
             </div>
           )}
         </div>
@@ -330,6 +332,12 @@ export default function HUD(props: HUDProps) {
               className="mt-6 w-full rounded-2xl bg-gradient-to-br from-amber-400 to-orange-600 px-6 py-3.5 text-lg font-bold text-white shadow-xl shadow-orange-900/40 transition hover:brightness-110 active:scale-[0.98]"
             >
               Commencer la partie
+            </button>
+            <button
+              onClick={() => setShowInfo(true)}
+              className="mt-2.5 w-full rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold text-white/60 transition hover:bg-white/10 hover:text-white/90"
+            >
+              ℹ️ Comment ce jeu a été fait
             </button>
 
             <p className="mt-4 text-[10px] tracking-wider text-white/20">
@@ -410,6 +418,36 @@ export default function HUD(props: HUDProps) {
             <p className="mt-4 text-[10px] tracking-wider text-white/20">
               Créé par Hylst / Geoffroy Streit
             </p>
+          </div>
+        </div>
+      )}
+
+      {showInfo && (
+        <div
+          className="pointer-events-auto absolute inset-0 z-50 flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm"
+          onClick={() => setShowInfo(false)}
+        >
+          <div
+            className="w-full max-w-lg max-h-[85vh] overflow-y-auto rounded-3xl border border-white/10 bg-gradient-to-b from-zinc-900/95 to-zinc-950/98 p-7 shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h3 className="bg-gradient-to-br from-amber-200 via-orange-300 to-amber-500 bg-clip-text text-2xl font-black text-transparent">
+              Comment ce jeu a été fait
+            </h3>
+            <div className="mt-4 space-y-3.5 text-sm leading-relaxed text-white/75">
+              <p><strong className="text-white">Stack :</strong> React 19, TypeScript 5.9, Tailwind CSS 4, Vite 7, compilé en un seul fichier HTML. Rendu 3D avec Three.js via React Three Fiber et Drei.</p>
+              <p><strong className="text-white">Graphismes :</strong> vraie scène 3D en WebGL, chaque bloc de la tour est un objet 3D individuel avec sa propre texture de bois.</p>
+              <p><strong className="text-white">Musique &amp; sons :</strong> entièrement synthétisés en direct avec l'API Web Audio, aucun fichier audio chargé.</p>
+              <p><strong className="text-white">Interactions :</strong> glisser pour orbiter la caméra, défiler pour zoomer, cliquer sur un bloc éclairé pour le sélectionner puis le retirer.</p>
+              <p><strong className="text-white">Architecture :</strong> logique de jeu pure (<code>jenga.ts</code>) séparée de la scène 3D, un modèle de stabilité calcule à chaque coup l'instabilité globale de la tour.</p>
+              <p><strong className="text-white">Algorithmes notables :</strong> l'instabilité dépend de la largeur et du centrage du support de chaque niveau (un support étroit ou décentré déstabilise plus), combinée à une tension qui monte progressivement à mesure que la base se vide et que la tour s'élève. Le niveau de danger passe de Stable à Ferme, Bancal puis Critique selon ce score.</p>
+            </div>
+            <button
+              onClick={() => setShowInfo(false)}
+              className="mt-6 w-full rounded-2xl bg-gradient-to-br from-amber-400 to-orange-600 px-6 py-3 text-sm font-bold text-white shadow-xl transition hover:brightness-110 active:scale-[0.98]"
+            >
+              Fermer
+            </button>
           </div>
         </div>
       )}
