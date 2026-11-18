@@ -16,4 +16,4 @@ Defie tes amis dans ce jeu de Jenga 3D. Retire des blocs, empile-les et surveill
 - Audio : Web Audio API (procedural)
 
 ## Contact
-- Email : geoffroy.streit@gmail.com
+- Email : geoffroy.streit@ik.me
