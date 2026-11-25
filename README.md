@@ -45,3 +45,7 @@ npm run build  # Build de production
 ## Credits
 - Cree par Geoffroy Streit (alias Hylst)
 - Creation assistee par IA
+
+## Licence
+
+Code : AGPL-3.0-or-later. Voir `LICENSE`.
