@@ -1,6 +1,6 @@
 # Tour de Tension
 
-**Jeu de Jenga 3D physique pour 2 joueurs.**
+**Jeu de tour de blocs 3D pour 2 joueurs.**
 
 Joue sur : [games.hylst.fr/tourdetension/](https://games.hylst.fr/tourdetension/)
 
@@ -43,7 +43,7 @@ npm run build  # Build de production
 ```
 
 ## Credits
-- Cree par Geoffroy Streit (alias Hylst)
+- Cree par Geoffroy Streit (alias Hylst) avec l'aide d'une IA
 - Creation assistee par IA
 
 ## Licence

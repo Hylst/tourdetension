@@ -1,9 +1,9 @@
 # A propos de Tour de Tension
 
-**Tour de Tension** est un jeu de Jenga 3D physique developpe par **Geoffroy Streit** (alias **Hylst**).
+**Tour de Tension** est un jeu de tour de blocs 3D developpe par **Geoffroy Streit** (alias **Hylst**).
 
 ## Le jeu
-Defie tes amis dans ce jeu de Jenga 3D. Retire des blocs, empile-les et surveille le danger qui monte. Modele de stabilite realiste, rendu 3D temps reel avec Three.js, audio atmospherique procedurale.
+Defie tes amis dans ce jeu de Jenga 3D. Retire des blocs, empile-les et surveille le danger qui monte. Modele de stabilite simplifie, rendu 3D temps reel avec Three.js, audio atmospherique procedurale.
 
 ## Le createur
 - Developpeur d'applications, ancien graphiste et compositeur

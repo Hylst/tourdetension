@@ -341,7 +341,7 @@ export default function HUD(props: HUDProps) {
             </button>
 
             <p className="mt-4 text-[10px] tracking-wider text-white/20">
-              Créé par Hylst / Geoffroy Streit
+              Créé par Geoffroy Streit (Hylst) avec l'aide d'une IA
             </p>
           </div>
         </div>
@@ -416,7 +416,7 @@ export default function HUD(props: HUDProps) {
             </button>
 
             <p className="mt-4 text-[10px] tracking-wider text-white/20">
-              Créé par Hylst / Geoffroy Streit
+              Créé par Geoffroy Streit (Hylst) avec l'aide d'une IA
             </p>
           </div>
         </div>

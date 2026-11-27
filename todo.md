@@ -21,3 +21,8 @@
 - [ ] Variation de la taille de tour
 - [ ] Mode defi (nombre de blocs retires)
 - [ ] Sons plus varies
+
+## Audit du 27/11/2026
+
+- [ ] Tester l'orbite et le pincement tactile sur mobile avant de conserver la promesse.
+- [ ] Décider si un vrai moteur physique est nécessaire, sinon assumer le modèle de stabilité simplifié.
