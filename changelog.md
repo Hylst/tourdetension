@@ -1,5 +1,10 @@
 # Changelog Tour de Tension
 
+## [Sécurité] - 2026-11-27
+
+- Vite 7.3.8 et fflate 0.6.11 ; audit complet à 0 vulnérabilité.
+- Build régénéré avec les textes et crédits du 27/11 ; `index.html` de 1 194 585 octets, servi à l'identique sur `games.hylst.fr/tourdetension/`.
+
 ## [1.1.0] 2026-08-03
 
 ### Ajoute
